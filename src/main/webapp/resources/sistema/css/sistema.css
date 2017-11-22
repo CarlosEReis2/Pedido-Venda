@@ -11,3 +11,15 @@
 	padding: 10px;
 	border-radius: 3px;
 }
+
+.rotulo{
+	width: 150px;
+}
+
+.ui-panelgrid-cell{
+	height: 34px;
+}
+
+.ui-toolbar {
+    padding: .4em !important;
+}
