@@ -26,6 +26,14 @@
 
 .ajax-status{
 	position: fixed;
-	bottom: 10px;
+	top: 60px;
 	right: 10px;
+}
+.ajax-image{
+	height: 45px;
+	width: 45px;
+}
+
+.centralizado{
+	text-align: center;
 }
