@@ -33,7 +33,7 @@
 			</p:panelGrid>
 
 			<!-- DATA TABLE -->
-			<p:dataTable value="#{pesquisaProdutoBean.produtosFiltrados}" var="produto"
+			<p:dataTable id="produtosTable" value="#{pesquisaProdutoBean.produtosFiltrados}" var="produto"
 				paginator="true" rows="10" paginatorAlwaysVisible="false" paginatorPosition="bottom"
 				emptyMessage="Nenhum produto encontrado."
 				style="margin-top: 20px">

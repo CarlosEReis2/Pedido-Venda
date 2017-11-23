@@ -37,3 +37,22 @@
 .centralizado{
 	text-align: center;
 }
+
+/* Personalizando componente p:calendar */
+.ui-datepicker .ui-datepicker-header, .ui-datepicker .ui-timepicker-div>.ui-widget-header{
+	background: none !important;
+	background-color: #2399e5 !important;
+	border: none;
+}
+.ui-datepicker th{
+	background: none;
+	background-color: #2399e5 !important; 
+}
+.ui-datepicker td a.ui-state-default{
+	background-color: #2399e5;
+}
+.ui-datepicker-today a.ui-state-highlight{
+	text-shadow: .6px .6px #000;
+	background: none;
+	background-color: red;
+}
