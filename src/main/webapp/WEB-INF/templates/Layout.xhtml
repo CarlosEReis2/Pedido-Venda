@@ -19,6 +19,7 @@
 	
 	<h:outputScript target="body" library="primefaces" name="jquery/jquery.js" />
 	<h:outputScript target="body" library="algaworks" name="javascripts/app.js" />
+	<h:outputScript target="body" library="sistema" name="js/jquery-maskmoney.js"/>
 </h:head>
 
 <h:body>
@@ -37,6 +38,15 @@
 		<ui:insert name="content" />
 	</section>
 	
+	<script>
+		function configurarMoeda() {
+			$(".moeda").maskMoney({decimal: ",", thousands: ".", allowZero: true})
+		}
+		
+		$(document).ready(function(){
+			configurarMoeda();
+		});
+	</script>
 </h:body>
 
 </html>

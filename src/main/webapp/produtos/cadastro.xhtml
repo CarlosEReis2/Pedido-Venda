@@ -9,6 +9,15 @@
 	
 	<ui:define name="content">
 		<h1 class="aw-page-title">Novo Produto</h1>
+
+		<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
+			<f:facet name="start">
+				<h:graphicImage library="sistema" name="images/loader.gif"></h:graphicImage>
+			</f:facet>
+			<f:facet name="complete">
+				<h:outputText value=""/>
+			</f:facet>
+		</p:ajaxStatus>
 		
 		<h:form id="frm">
 			<p:toolbar>
@@ -40,7 +49,7 @@
 				</p:selectOneMenu>
 				
 				<p:outputLabel value="Valor Unitário" for="valorUnitario"/>
-				<p:inputText id="valorUnitario" size="10" maxlength="10"/>
+				<p:inputText id="valorUnitario" size="10" maxlength="10" styleClass="moeda"/>
 				
 				<p:outputLabel value="Estoque" for="estoque"/>
 				<p:inputText id="estoque" size="10" maxlength="4"/>
