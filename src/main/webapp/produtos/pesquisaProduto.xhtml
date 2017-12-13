@@ -61,11 +61,18 @@
 				<p:column headerText="" style="text-align: center; width: 10%">
 					<p:columnGroup>
 						<p:button icon="fa fa-fw fa-edit" alt="Editar" title="Editar"/>
-						<p:button icon="fa fa-fw fa-trash-o" alt="Excluir" title="Excluir"/>
+						<p:commandButton icon="fa fa-fw fa-trash-o" alt="Excluir" title="Excluir" oncomplete="PF('confirmacaoExclusao').show()"/>
 					</p:columnGroup>
 				</p:column>
 				
 			</p:dataTable>
+			
+			<p:confirmDialog header="Exclusão de produto"
+				message="Tem certeza que deseja excluir o produto?"
+				widgetVar="confirmacaoExclusao" id="confirmacaoExclusaoDialog">
+				<p:button value="Não" onclick="PF('confirmacaoExclusao').hide(); return false;" />
+				<p:commandButton value="Sim" oncomplete="PF('confirmacaoExclusao').hide();" />
+			</p:confirmDialog>
 			
 		</h:form>
 
