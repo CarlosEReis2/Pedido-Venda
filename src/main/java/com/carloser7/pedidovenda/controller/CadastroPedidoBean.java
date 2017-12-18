@@ -6,6 +6,8 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import com.carloser7.pedidovenda.service.NegocioException;
+
 @ManagedBean
 @RequestScoped
 public class CadastroPedidoBean {
@@ -21,4 +23,8 @@ public class CadastroPedidoBean {
 		return itens;
 	}
 
+	public void salvar() {
+		throw new NegocioException("Pedido não pode ser salvo, pois ainda não foi implementado.");
+	}
+	
 }
