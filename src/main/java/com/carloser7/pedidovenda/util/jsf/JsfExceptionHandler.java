@@ -35,15 +35,20 @@ public class JsfExceptionHandler extends ExceptionHandlerWrapper {
 
 			Throwable exception = context.getException();
 
+			boolean handled = false;
+
 			try {
 				if (exception instanceof ViewExpiredException) {
+					handled = true;
 					redirect("/");
 				}
 			} finally {
-				events.remove();
+				if (handled) {
+					events.remove();
+				}
 			}
 		}
-		
+
 		getWrapped().handle();
 	}
 
